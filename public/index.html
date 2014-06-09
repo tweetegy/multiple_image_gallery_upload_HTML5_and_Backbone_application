@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+
+    <title>Image Gallery in Backbone</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      .thumb {
+      height: 75px;
+      border: 1px solid black;
+      margin: 10px 5px 0 0;
+      border-image: initial;
+      }
+
+      output {
+      display: inline;
+      }
+    </style>
+
+    <!-- Added the following three libs refernces for Backbone -->
+    <script type='text/javascript' src='libs/jquery-1.5.1.min.js'></script>
+    <script type='text/javascript' src='libs/underscore.js'></script>
+    <script type='text/javascript' src='libs/backbone.js'></script>
+    <script type='text/javascript' src='libs/webtoolkit.base64.js'></script>
+    <script type='text/javascript' src='libs/sha1.js'></script>
+    <script type='text/javascript' src='libs/jquery.form.js'></script>
+    <script type='text/javascript' src='libs/base64-binary.js'></script>
+    <script type='text/javascript' src='app/image_saver.js'></script>
+
+    <!-- Bootstrap -->
+    <script type='text/javascript' src='app/bootstrap.js'></script>
+
+    <!-- Templates -->
+    <script type="text/template" id="gallery-template">
+      <h2>Image Gallery</h2>
+      <output id="thumbnails"></div>
+    </script>
+
+    <script type="text/template" id="image-template">
+	<img class="thumb" src='<%= data %>' title='<%= filename %>' />
+    </script>
+
+    <script type="text/template" id="gallery-selection-template">
+      <input id="myGallery" type="file" name="file" multiple /><br />
+      <button id="saveGallery">Save Gallery</button>
+    </script>
+
+</head>
+
+<body>
+  <div id='container' />
+</body>
+
+</html>
